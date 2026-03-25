@@ -1,0 +1,16 @@
+{
+  "name": "PodonPictures",
+  "short_name": "PodonPictures",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "description": "Studio fotografi & videografi yang menangkap momen penting Anda dengan gaya estetik.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

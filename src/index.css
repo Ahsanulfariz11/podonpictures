@@ -1,0 +1,52 @@
+/* 1. Import Font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* 2. Import Tailwind v4 (Sintaks Baru) */
+@import "tailwindcss";
+
+/* 3. CSS Variables & Tema Kustom */
+@theme {
+  /* Font Heading terpusat — gunakan class `font-heading` di JSX */
+  --font-heading: 'Manrope', sans-serif;
+}
+
+/* 4. Custom Utilities */
+@layer utilities {
+  .pb-safe-area {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+  }
+
+  /* Animasi sekali jalan untuk badge statistik */
+  @keyframes float-once {
+    0% {
+      transform: translateY(0px);
+    }
+
+    30% {
+      transform: translateY(-8px);
+    }
+
+    60% {
+      transform: translateY(-4px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .animate-float-once {
+    animation: float-once 1.2s ease-out forwards;
+  }
+}
+
+/* 5. Reusable Base Components (untuk CrudPage) */
+@layer components {
+  .label-xs {
+    @apply text-xs font-semibold uppercase tracking-widest text-stone-500;
+  }
+
+  .input-base {
+    @apply w-full rounded-2xl border border-stone-200 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-stone-300 placeholder:text-stone-300 bg-white transition-shadow;
+  }
+}

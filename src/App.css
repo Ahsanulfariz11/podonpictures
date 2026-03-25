@@ -1,0 +1,12 @@
+/* 1. Import Font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* 2. Import Tailwind v4 (Sintaks Baru) */
+@import "tailwindcss";
+
+/* 3. Custom Utilities */
+@layer utilities {
+  .pb-safe-area {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+  }
+}
