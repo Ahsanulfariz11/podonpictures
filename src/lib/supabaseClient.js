@@ -13,4 +13,7 @@ if (!isSupabaseEnabled) {
   console.debug('[supabaseClient] Supabase config loaded', { supabaseUrl, hasAnonKey: Boolean(supabaseAnonKey) });
 }
 
-export const supabase = createClient(supabaseUrl ?? '', supabaseAnonKey ?? '');
+export const supabase = createClient(
+  supabaseUrl || 'https://dummy.supabase.co',
+  supabaseAnonKey || 'dummy-key'
+);
